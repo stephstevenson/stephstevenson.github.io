@@ -1,0 +1,56 @@
+# Site settings
+title: *blog
+email: you@example.com
+description: > # this means to ignore newlines until "baseurl:"
+  A wonderful blog of wonderful things.
+owner:
+  name: Stephanie Stevenson # or company name
+  url: https://stephstevenson.github.io
+first_published: 2017
+baseurl:  # the subpath of your site, e.g. /blog/
+url:  # the base hostname & protocol for your site
+twitter_username: twitter_username
+github_username:  stephstevenson
+
+social:
+  # github:
+  # deviantart:
+  # dribbble:
+  # linkedin-square:
+  # twitter:
+  pintrest: https://pintrest.com/
+  email: /contact/
+  #flickr:
+  #spotify:
+  #stack-overflow:
+  #vimeo:
+  #reddit:
+  #pied-piper:
+  #digg:
+  #weibo:
+  #trello:
+  #foursquare:
+  #linux:
+  #bitbucket-square:
+  #vk:
+  #slack:
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+sass:
+ style: compressed
+
+# Pagination
+paginate: 15
+paginate_path: "/blog/page:num/"
+
+mailaction: https://getsimpleform.com/messages?form_api_token=b2c41d3e99fac447c26b268851e42028
+
+collections:
+  blog:
+    output: true
+    permalink: /blog/:path/
+  archive:
+    output: true
+    permalink: /archive/:path/

@@ -1,0 +1,34 @@
+---
+layout: page
+permalink: /archive/
+title: archive
+description: Showcase your writing, short stories, or posts. Replace this text with your description.
+key: 3
+---
+
+<section id="blog">
+<div id="search" style="width:85%;margin:auto;margin-top:3em;">
+  {% include search.html %}
+</div>
+
+  <div id="archive">
+    <ul style="list-style-type: none;">
+      {% assign p = '9999' %}
+      {% for post in site.categories.blog %}
+        {% assign n = post.date | date: "%Y" %}
+        {% if n != p %}
+          {% assign p = n %}
+          <br/><hr/><h5 class="year">{{ n }}</h5>
+        {% endif %}
+        <li class="post">
+          <span class="post-date">{{ post.date | date: "%b %d" }}</span>&nbsp;
+            <a href="{{ post.url }}" style="white-space: nowrap;">
+              <b class="post-title">{{ post.title }}</b>
+            </a>&nbsp;
+            {{ post.desc | strip_html | truncatewords: 12 }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  </div>
+  <section>
