@@ -21,18 +21,14 @@ key: 3
           <br/><hr/><h5 class="year">{{ n }}</h5>
         {% endif %}
         <li class="post">
-          <span class="post-date">{{ post.date }}</span>&nbsp;
+          <span class="post-date">{{ post.date  | date: "%b %d"  }}</span>&nbsp;
           {% if post.redirect %}
-            <a href="{{ post.redirect }}" target="_blank">
+            <a href="{{ post.redirect }}" target="_blank"><b class="post-title">{{ post.title }}</b></a>&nbsp;{{ post.description | strip_html | truncatewords: 12 }}
           {% else %}
-            <a href="{{ site.baseurl }}{{ post.url }}">
+            <a href="{{ site.baseurl }}{{ post.url }}"><b class="post-title">{{ post.title }}</b></a>&nbsp;{{ post.description | strip_html | truncatewords: 12 }}
           {% endif %}
-          <b class="post-title">{{ post.title }}</b>
-          </a>&nbsp;
-          {{ post.description | strip_html | truncatewords: 12 }}
         </li>
       {% endfor %}
     </ul>
-  {% endif %}
   </div>
 </section>
