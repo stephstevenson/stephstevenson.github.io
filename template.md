@@ -2,13 +2,14 @@
 layout: post
 title: Project # title goes here
 description: # description goes here
-date: 05/28/2017 # post date goes here
-img: img/1.jpg #The image that shows up in the grid goes here
+date: 2017-05-28 # post date goes here
+img: img/1.jpg # the image that shows up in the grid goes here
+#redirect: https://google.com/  # remove the '#' at the beginning of thi line to have the post redirect to an external site
 ---
 
 ## Make a new post  
   1. Create a new '.md' file in the \_blog folder
-  2. Copy the above front-matter to the new blog post you want to make
+  2. Copy the above front-matter to the top of the new blog post you want to make
 <br>
 <hr>
 
@@ -28,3 +29,7 @@ img: img/1.jpg #The image that shows up in the grid goes here
   * >block quotes - ```>block quotes```
   * new-line - ```<br>```
   * horizontal-line - ```_______``` or or ```*****``` or ```<hr>```
+
+<br>
+
+#### For more info check out the [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images)
