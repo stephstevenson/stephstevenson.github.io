@@ -1,5 +1,5 @@
 # Site settings
-title: *blog
+title: could be
 email: you@example.com
 description: > # this means to ignore newlines until "baseurl:"
   A wonderful blog of wonderful things.
@@ -54,3 +54,5 @@ collections:
   archive:
     output: true
     permalink: /archive/:path/
+
+exclude: ['template.md', 'TODO.md']
