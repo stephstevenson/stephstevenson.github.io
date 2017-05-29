@@ -22,13 +22,17 @@ key: 3
         {% endif %}
         <li class="post">
           <span class="post-date">{{ post.date }}</span>&nbsp;
-            <a href="{{ post.url }}" style="white-space: nowrap;">
-              <b class="post-title">{{ post.title }}</b>
-            </a>&nbsp;
-            {{ post.desc | strip_html | truncatewords: 12 }}
+          {% if post.redirect %}
+            <a href="{{ post.redirect }}" target="_blank">
+          {% else %}
+            <a href="{{ site.baseurl }}{{ post.url }}">
+          {% endif %}
+          <b class="post-title">{{ post.title }}</b>
+          </a>&nbsp;
+          {{ post.description | strip_html | truncatewords: 12 }}
         </li>
       {% endfor %}
     </ul>
   {% endif %}
   </div>
-  <section>
+</section>
