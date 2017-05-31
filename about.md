@@ -5,7 +5,7 @@ permalink: /about/
 key: 2
 ---
 
-<img class="col one right" src="/img/about.jpg">
+<img class="col one right" src="/images/avatar.png">
 
 <br/>
 Write your biography here. Tell the world about yourself. Link to your favorite <a href="http://reddit.com" target="blank">subreddit</a>. You can put a picture in, too. The code is already in, just name your picture "prof_pic.jpg" and put it in the img folder.
