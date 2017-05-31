@@ -12,6 +12,12 @@ url:  # the base hostname & protocol for your site
 twitter_username: twitter_username
 github_username:  stephstevenson
 
+name: 'Stephanie Stevenson'
+author: 'Stephanie Stevenson'
+author_image: "/images/avatar.png"
+cover: "/images/cover.jpg"
+logo: "/images/logo.jpg"
+
 social:
   # github:
   # deviantart:
@@ -56,3 +62,7 @@ collections:
     permalink: /archive/:path/
 
 exclude: ['template.md', 'TODO.md']
+
+gems:
+  - jemoji
+  - jekyll-paginate
