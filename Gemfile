@@ -19,5 +19,7 @@ gem 'jekyll', '>= 3.1.2'
 # group :jekyll_plugins do
 #  gem "jekyll-github-metadata", "~> 1.0"
 # end
-
+gem 'github-pages'
+gem 'bourbon'
+gem 'jemoji'
 gem 'exifr'
