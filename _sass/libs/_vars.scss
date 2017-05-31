@@ -1,7 +1,4 @@
-/*
- * Spectral by HTML5 UP
- * Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
- */
+/* Variables */
 
 	// Misc
 	$misc: (
@@ -36,7 +33,7 @@
 		fixed-size:            1em,
 		inline-fixed-size:     1.05em,
 		fixed-lheight:         1.75em,
-		ctrl-family:		   ('Open Sans', 'Montserrat', Helvetica, sans-serif),
+		ctrl-family:		   ('Open Sans', Helvetica, sans-serif),
 		ctrl-size-xxlarge:      15pt,
 		ctrl-size-xlarge:       13pt,
 		ctrl-size-large:        12pt,
@@ -51,7 +48,7 @@
 		ctrl-bttn-size:         0.8em,
 		ctrl-bttn-bigsize:     1.35em,
 		ctrl-bttn-lheight:    3.125em,
-		prose-family:		  ('Merriweather', 'Georgia', 'Garamond', serif),
+		prose-family:		  ('Volkhov', 'Georgia', 'Garamond', serif),
 		prose-size-xxlarge:      15pt,
 		prose-size-xlarge:       13pt,
 		prose-size-large:        12pt,
@@ -62,6 +59,7 @@
 		prose-lheight-small:   1.35em,
 		prose-lheight-smaller: 1.25em,
 		prose-lheight-smallest: 0.9em,
+		hdr-family:           ('Lobster Two', 'Open Sans', sans-serif),
 		hdr-size-xxxlarge:     2.25em,
 		hdr-size-xxlarge:      1.75em,
 		hdr-size-xlarge:       1.35em,
