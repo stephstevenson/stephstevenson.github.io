@@ -72,7 +72,7 @@ import $ from "jquery";
         }
     });
     $(function() {
-    var fonts = 'https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic|Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,600,600italic,800,800italic,900,900italic|Merriweather:300,300italic,400,400italic,700,700italic,900,900italic|Source+Code+Pro:200,300,400,500,600,700,900';
+    var fonts = 'https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic|Lobster|Volkhov:400,400italic,700,700italic|Source+Code+Pro:200,300,400,500,600,700,900';
     if (document.createStyleSheet) document.createStyleSheet(fonts);
     else $("head").append($("<link rel='stylesheet' href='"+ fonts +"' type='text/css' media='screen' />"));
     });
