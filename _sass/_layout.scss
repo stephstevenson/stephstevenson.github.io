@@ -51,9 +51,13 @@
     line-height: $nav-height;
     right: 1.5em;
     .page-link {
+        color: #666;
         line-height: $base-line-height;  // Gaps between nav items, but not on the first one
         &:not(:first-child) {
             margin-left: 10px;
+        }
+        &:hover, &:active {
+            color: $theme-color;
         }
     }
     @include media-query($on-palm) {
@@ -86,10 +90,11 @@
     h1 {
         font-family: ('Lobster', 'Open Sans', sans-serif);
         color: $theme-color;
-        font-size: 75px;
+        font-size: 80px;
+        line-height: 0.75;
     }
-    h2 {
-        font-size:25px;
+    h3 {
+        font-size: 25px !important;
     }
 }
 .wrapper-head {
@@ -140,7 +145,7 @@
     margin: 0px 0;
     list-style: none;
     > li {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 }
 .center {
@@ -151,14 +156,6 @@
  */
 .post-header {
     margin-bottom: $vertical-spacing-unit;
-}
-.post-title {
-    font-size: 24px;
-    letter-spacing: -1px;
-    line-height: 1;
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
 }
 .post-content {
     h2 {
@@ -286,13 +283,41 @@
     }
 }
 
-/** Poem formatting ********************************************/
-.poem-title {
-    font-size: 24px;
-    letter-spacing: -1px;
-    line-height: 1;
-    @include media-query($on-laptop) {
-    font-size: 16px;
+/** Archive ********************************************/
+#archive {
+    margin-top: 2.75em;
+    .year {
+        font-size: 24px;
+        font-weight: 600;
+        color: lighten(desaturate($theme-color, 10%), 10%);
+        margin: 4px 0 16px;
+    }
+    .archive-post {
+        font-size: 15px;
+        font-weight: 300;
+        letter-spacing: 0.1px;
+        color: _palette(fg);
+        padding: 0.25em 0;
+    }
+    .post-date {
+        font-size: 12px;
+        font-weight: 400;
+        color: _palette(fg-light);
+    }
+    .post-title {
+        font-size: 19px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 1;
+        color: lighten(_palette(accent2, bg), 5%);
+        padding-right: 4px;
+        @include media-query($on-laptop) {
+            font-size: 36px;
+        }
+        &:hover, &:active {
+            color: lighten(desaturate($theme-color, 30%), 18%);
+            // color: lighten(_palette(accent2, bg), 10%)
+        }
     }
 }
 
@@ -615,6 +640,22 @@
 
 #search {
     #search-container {
+        margin-top: 1em;
+        ::-webkit-input-placeholder { /* Chrome */
+            color: rgba(0,0,0,0.3);
+        }
+        :-ms-input-placeholder { /* IE 10+ */
+            color: rgba(0,0,0,0.3);
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+            color: rgba(0,0,0,0.3);
+        }
+        :-moz-placeholder { /* Firefox 4 - 18 */
+            color: rgba(0,0,0,0.3);
+        }
+        input:focus {
+            outline: 0;
+        }
 		#icon {
             font-family: 'FontAwesome';
             content: "\foo2";
@@ -623,9 +664,11 @@
 			left: 0.6em;
 			color: #A2A2A2;
         }
-		ul {
+		#results-container {
 			list-style-type: none;
-			padding: 0.25em 0 0 0.4em;
+            width: 100%;
+            margin: auto;
+			padding: 0.15em 1.5em 0.15em 1.5em;
 			li {
 				background-color: #E3E6E9;
 				font-family: _font(ctrl-family);
@@ -635,10 +678,11 @@
 				border: 1px solid #A2A6AA;
 				border-bottom-width: 0px;
 				border-radius: 2px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.5);
 				&:nth-child(2n) {
 					background-color: #D8DEE2;
 				}
-				&:nth-child(5) {
+				&:last-child {
 					border-bottom: 1px solid #A2A6AA;
 				}
                 &:hover {
@@ -654,12 +698,15 @@
 		}
 	}
 	#search-input {
+        display: inline-block;
 		font-size: 0.9em;
-		display: inline-block;
+        background-color: lighten(_palette(bg), 8%);
+        color: _palette(fg);
 		box-size: border-box;
 		height: 1em;
 		width: 100%;
-		border-radius: 10px;
+        border-color: 0.5px inset #666 !important;
+		border-radius: 13px;
 		padding: 0.5em 0.5em 0.5em 2.35em;
 	}
 }
@@ -838,7 +885,6 @@
 			padding: 2px 0 2px 1em !important;
 
 			&:first-child {
-                // display: inline-block;
 				border-left: 0 !important;
 				margin-left: 0;
 				padding: 0 0.55em 0 0 !important;
@@ -848,7 +894,7 @@
 				color: inherit;
                 text-decoration: none;
 				&:hover {
-					color: _palette(accent6, bg);
+					color: $theme-color;
 				}
 			}
 
