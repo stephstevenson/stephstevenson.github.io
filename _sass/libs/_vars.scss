@@ -78,13 +78,13 @@
 
     // Palette - 2e3842
 	$palette: (
-		bg:					#303840,
-		fg-bold:			#ffffff,
-		fg:					mix(#303840, #ffffff, 25%),
-		fg-light:			rgba(255,255,255,0.5),
-		border:				#ffffff,
+		bg:					#fdfdfd,
+		fg-bold:			#101010,
+		fg:					#333333,
+		fg-light:			rgba(0,0,0,0.5),
+		border:				#101010,
 		border-bg:			rgba(144,144,144,0.25),
-		border2:			#ffffff,
+		border2:			#101010,
 		border2-bg:			rgba(144,144,144,0.5),
         white:              #fafafa,
 
@@ -150,11 +150,11 @@
 		),
 		// ed4933 - f4453b - ea4945 - e64642
 		accent6: (
-			bg:				#d74246,
+			bg:				#ff3636,
 			fg-bold:		#ffffff,
-			fg:				mix(#d74246, #ffffff, 25%),
-			fg-light:		mix(#d74246, #ffffff, 40%),
-			shadow:         desaturate(darken(#d74246, 10%), 15%),
+			fg:				mix(#ff3636, #ffffff, 25%),
+			fg-light:		mix(#ff3636, #ffffff, 40%),
+			shadow:         desaturate(darken(#ff3636, 10%), 15%),
 			border:			rgba(0,0,0,0.125),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(0,0,0,0.25),
