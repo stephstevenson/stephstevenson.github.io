@@ -76,37 +76,37 @@
 		hdr-lheight-smaller:      1em
 	);
 
-    // Palette - 2e3842
+    // Palette
 	$palette: (
-		bg:					#fdfdfd,
-		fg-bold:			#101010,
-		fg:					#333333,
-		fg-light:			rgba(0,0,0,0.5),
-		border:				#101010,
+		bg:					#dee5e5,
+		// fg-bold:			#101010,
+        fg-bold:            #333332,
+		fg:					#404040,
+		fg-light:			rgba(0,0,0,0.4),
+		border:				rgba(0,0,0,0.125),
 		border-bg:			rgba(144,144,144,0.25),
 		border2:			#101010,
 		border2-bg:			rgba(144,144,144,0.5),
         white:              #fafafa,
 
-		// 21b2a6 - 28b7b3 - 51aea6 - 51a0a6
 		accent1: (
-			bg:				#5d959a,
+			bg:				#252930,
 			fg-bold:		#ffffff,
-			fg:				mix(#5d959a, #ffffff, 20%),
-			fg-light:		mix(#5d959a, #ffffff, 40%),
-			shadow:         desaturate(darken(#5d959a, 12%), 10%),
+			fg:				mix(#35393d, #ffffff, 20%),
+			fg-light:		mix(#35393d, #ffffff, 50%),
+			shadow:         desaturate(darken(#35393d, 12%), 10%),
 			border:			rgba(0,0,0,0.125),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(0,0,0,0.25),
 			border2-bg:		rgba(255,255,255,0.2)
 		),
 
-		accent2: (
-			bg:				#00ffcc,
+        accent2: (
+			bg:				#5d959a,
 			fg-bold:		#ffffff,
-			fg:				mix(#00ffcc, #ffffff, 22%),
-			fg-light:		mix(#00ffcc, #ffffff, 40%),
-			shadow:         desaturate(darken(#00ffcc, 20%), 30%),
+			fg:				mix(#5d959a, #ffffff, 20%),
+			fg-light:		mix(#5d959a, #ffffff, 40%),
+			shadow:         desaturate(darken(#5d959a, 12%), 10%),
 			border:			rgba(0,0,0,0.125),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(0,0,0,0.25),
@@ -136,7 +136,7 @@
 			border2:		rgba(0,0,0,0.25),
 			border2-bg:		rgba(255,255,255,0.2)
 		),
-		// 505393 - 555393 - 525889
+
 		accent5: (
 			bg:				#585e89,
 			fg-bold:		#ffffff,
@@ -148,7 +148,7 @@
 			border2:		rgba(0,0,0,0.25),
 			border2-bg:		rgba(255,255,255,0.2)
 		),
-		// ed4933 - f4453b - ea4945 - e64642
+
 		accent6: (
 			bg:				#ff3636,
 			fg-bold:		#ffffff,
@@ -172,3 +172,11 @@
 			border2-bg:		rgba(0,0,0,0.1)
 		)
 	);
+
+	// Palette
+	// * #35393d
+	// * #4f6272
+	// * #dee5e5
+	// * #b7c3f3
+	// * #d4e4bc
+	// * #ff3636
