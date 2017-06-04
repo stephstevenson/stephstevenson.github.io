@@ -1,4 +1,6 @@
+@import 'libs/functions';
 @import 'libs/skel';
+@import 'libs/mixins';
 @import 'libs/vars';
 
 /**
@@ -84,7 +86,7 @@
     h1 {
         font-family: ('Lobster', 'Open Sans', sans-serif);
         color: $theme-color;
-        font-size:75px;
+        font-size: 75px;
     }
     h2 {
         font-size:25px;
@@ -141,11 +143,6 @@
         margin-bottom: 20px;
     }
 }
-.contacticon {
-    font-size: 35px;
-    display:block;
-    margin: 10px;
-}
 .center {
     text-align: center;
 }
@@ -193,11 +190,11 @@
     font-size: 42px;
 }
 
-.post .blog-post-content {
+.post .written-content {
     font-family: _font(prose-family);
     color: #333;
-    width: 100%;
-    padding-top: 550px;
+    width: 80%;
+    padding-top: 0;
     h1 {
         font-size: 64px;
         letter-spacing: -0.02em;
@@ -255,7 +252,7 @@
     }
     a {
         color: #333;
-        text-decoration: underline;
+        // text-decoration: underline;
     }
     img {
         max-width: 100%;
@@ -466,15 +463,16 @@
 }
 
 .content {
-    width: 100%;
-    max-width: 700px;
     margin: 0 auto;
+    width: 100%;
+    // max-width: 700px;
+    max-width: 100%;
     // @include box-sizing(border-box),
     // @include respond-to(800)
     //     padding: 0 16px*2;
     article {
-        padding: 40px 0;
         border-bottom: 1px solid #f2f2f0;
+        padding: 0;
     }
     &:last-child {
         border-bottom: 0px;
@@ -486,10 +484,10 @@
         display: block;
         font-size: 28px;
         line-height: 1.1;
-        margin: 0 0;
+        margin: 0;
         a {
+            color: _palette(fg-bold);
             text-decoration: none;
-            color: #333332;
             &:hover {
                 text-decoration: none;
             }
@@ -505,18 +503,88 @@
     }
     .post-meta {
         font-size: 14px;
-        color: #b3b3b1;
+        color: _palette(fg-light);;
         line-height: 30px;
         text-align: center;
         max-width: 90%;
         margin: auto;
         a {
-            color: #b3b3b1;
+            color: _palette(fg-light);;
             text-decoration: none;
             &:hover {
               text-decoration: underline;
             }
         }
+    }
+}
+
+.noarticleimage {
+    position: relative;
+    left: 10%;
+    .post-meta {
+        font-family: _font(ctrl-family);
+        font-size: 14px;
+        color: _palette(fg-light);;
+        line-height: 30px;
+        float: left;
+        text-align: left;
+        max-width: 90%;
+        margin: auto;
+        padding-top: 60px;
+        a {
+            color: _palette(fg-light);;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+        }
+        .post-title {
+            display: block;
+            font-size: 75px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            color: _palette(fg-bold);
+            width: 100%;
+            border-bottom: 1px solid _palette(border);
+            margin: 0 auto 14px;
+            a {
+                color: _palette(fg-bold);
+                text-decoration: none;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .author-image {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 8px;
+        margin-bottom: -10px;
+        float: left;
+        background-size: cover;
+        border-radius: 100%;
+        text-indent: -9999px;
+    }
+    .author-name {
+        display: inline;
+        float: left;
+        padding-right: 5px;
+    }
+    .post-meta-text {
+        color: _palette(fg-light);
+        letter-spacing: -0.02em;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+        overflow: hidden;
+        font-family: _font(ctrl-family);
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 }
 
@@ -528,10 +596,10 @@
 	font-size: _font(hdr-size-xsmall);
 	height: 8.5em;
 	width: 16em;
-	left: 50%;
+	// left: 50%;
 	bottom: 0;
 	letter-spacing: _size(letter-spacing-alt);
-	margin-left: -8.5em;
+	margin: 0 auto;
     padding-left: _size(letter-spacing-alt);
     border: 0;
 	opacity: 1;
@@ -713,9 +781,9 @@
 //
 // /* Footer */
 #footer {
-	background-color: #e0e0e0;
+	background-color: _palette(accent1, bg);
 	text-align: center;
-	padding: 3.75em 3em 0.25em 3em !important;
+	padding: 2.5em 3em 0.25em 3em !important;
 	.icons {
         list-style: none;
 		font-size: 1.5em;
@@ -733,40 +801,60 @@
 			left: -3px;
         }
 	}
-
+    .contact-icon {
+        display:block;
+        position: relative;
+        font-size: 30px;
+        margin: 10px auto 15px;
+        a {
+            position: relative;
+            color: rgba(255,255,255,0.25);
+            padding-right: 8px;
+            &:last-child {
+                font-size: 28px;
+                padding-right: 0;
+                bottom: 1px;
+            }
+            &:hover, &:active {
+                color: desaturate($theme-color, 10%);
+                opacity: 0.75;
+            }
+        }
+    }
 	.copyright {
-		color: _palette(fg-light);
-		font-size: 0.6em;
-		letter-spacing: _size(letter-spacing-alt);
+		color: _palette(accent1, fg-light);
+		font-size: 0.5em;
+		letter-spacing: _size(letter-spacing-alt) !important;
 		list-style: none;
-		margin-bottom: 1.25em;
-		padding: 0;
 		text-transform: uppercase;
+        margin: auto;
+        margin-bottom: 1.25em;
+        padding: 0;
 
 		li {
-            display: inline-block;
-			border-left: solid 1px #ddd;
-			line-height: _font(hdr-lheight-smaller);
-			padding-left: 1em;
+            display: inline-block !important;
+			border-left: solid 1px _palette(accent1, fg-light) !important;
+			line-height: _font(hdr-lheight-smaller) !important;
+			padding: 2px 0 2px 1em !important;
 
 			&:first-child {
-                display: inline-block;
-				border-left: 0;
+                // display: inline-block;
+				border-left: 0 !important;
 				margin-left: 0;
-				padding: 0 0.55em 0 0;
+				padding: 0 0.55em 0 0 !important;
 			}
 
 			a {
 				color: inherit;
-
+                text-decoration: none;
 				&:hover {
 					color: _palette(accent6, bg);
 				}
 			}
 
 			@include breakpoint(xsmall) {
+                display: block;
 				border: 0;
-				display: block;
 				line-height: _font(hdr-lheight-normal);
 				margin: 0;
 				padding: 0.5em 0;
@@ -775,10 +863,14 @@
 	}
 
 	@include breakpoint(medium) {
-		// @include padding(4em, 3em);
+		@include padding(4em, 3em);
 	}
 
 	@include breakpoint(small) {
-		// @include padding(3em, 2em);
+		@include padding(3em, 2em);
 	}
+}
+
+html {
+    background-color: _palette(bg);
 }
