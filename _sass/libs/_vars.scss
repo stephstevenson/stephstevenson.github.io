@@ -81,7 +81,7 @@
 		bg:					#dee5e5,
 		// fg-bold:			#101010,
         fg-bold:            #333332,
-		fg:					#404040,
+		fg:					#4b4b4b,
 		fg-light:			rgba(0,0,0,0.4),
 		border:				rgba(0,0,0,0.125),
 		border-bg:			rgba(144,144,144,0.25),
@@ -102,11 +102,11 @@
 		),
 
         accent2: (
-			bg:				#5d959a,
+			bg:				#4f6272,
 			fg-bold:		#ffffff,
-			fg:				mix(#5d959a, #ffffff, 20%),
-			fg-light:		mix(#5d959a, #ffffff, 40%),
-			shadow:         desaturate(darken(#5d959a, 12%), 10%),
+			fg:				mix(#4f6272, #ffffff, 20%),
+			fg-light:		mix(#4f6272, #ffffff, 40%),
+			shadow:         desaturate(darken(#4f6272, 12%), 10%),
 			border:			rgba(0,0,0,0.125),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(0,0,0,0.25),
@@ -114,11 +114,11 @@
 		),
 
 		accent3: (
-			bg:				#00f0ff,
+			bg:				#b7c3f3,
 			fg-bold:		#ffffff,
-			fg:				mix(#00f0ff, #ffffff, 25%),
-			fg-light:		mix(#00f0ff, #ffffff, 40%),
-			shadow:         desaturate(darken(#00f0ff, 15%), 30%),
+			fg:				mix(#b7c3f3, #ffffff, 25%),
+			fg-light:		mix(#b7c3f3, #ffffff, 40%),
+			shadow:         desaturate(darken(#b7c3f3, 10%), 5%),
 			border:			rgba(0,0,0,0.125),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(0,0,0,0.25),
@@ -126,11 +126,11 @@
 		),
 
 		accent4: (
-			bg:				#95cde0, // #76ddff,
+			bg:				#d4e4bc,
 			fg-bold:		#ffffff,
-			fg:				mix(#76ddff, #ffffff, 25%),
-			fg-light:		mix(#76ddff, #ffffff, 40%),
-			shadow:         desaturate(darken(#76ddff, 20%), 30%),
+			fg:				mix(#d4e4bc, #ffffff, 25%),
+			fg-light:		mix(#d4e4bc, #ffffff, 40%),
+			shadow:         desaturate(darken(#d4e4bc, 15%), 30%),
 			border:			rgba(0,0,0,0.125),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(0,0,0,0.25),
@@ -138,18 +138,6 @@
 		),
 
 		accent5: (
-			bg:				#585e89,
-			fg-bold:		#ffffff,
-			fg:				mix(#585e89, #ffffff, 25%),
-			fg-light:		mix(#585e89, #ffffff, 40%),
-			shadow:         desaturate(darken(#585e89, 10%), 5%),
-			border:			rgba(0,0,0,0.125),
-			border-bg:		rgba(255,255,255,0.075),
-			border2:		rgba(0,0,0,0.25),
-			border2-bg:		rgba(255,255,255,0.2)
-		),
-
-		accent6: (
 			bg:				#ff3636,
 			fg-bold:		#ffffff,
 			fg:				mix(#ff3636, #ffffff, 25%),
@@ -161,7 +149,7 @@
 			border2-bg:		rgba(255,255,255,0.2)
 		),
 
-		accent7: (
+		accent6: (
 			bg:				#fefdfe,
 			fg-bold:		#303840,
 			fg:				#4E4852,
