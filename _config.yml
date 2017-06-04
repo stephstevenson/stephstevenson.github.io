@@ -4,11 +4,11 @@ email: you@example.com
 description: > # this means to ignore newlines until "baseurl:"
   A wonderful blog of wonderful things.
 owner:
-  name: Stephanie Stevenson # or company name
+  name: Steph Stevenson # or company name
   url: https://stephstevenson.github.io
 first_published: 2017
-baseurl:  # the subpath of your site, e.g. /blog/
-url:  # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: stephstevenson.github.io # the base hostname & protocol for your site
 twitter_username: twitter_username
 github_username:  stephstevenson
 
@@ -62,6 +62,12 @@ collections:
     permalink: /archive/:path/
 
 exclude: ['template.md', 'TODO.md', 'Resource.md']
+include: ['_pages','_projects','_designs','.htaccess']
+defaults:
+  - scope:
+      path: _pages
+    values:
+      layout: page
 
 gems:
   - jemoji
