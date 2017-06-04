@@ -14,7 +14,7 @@ key: 3
   <div id="archive">
     <ul style="list-style-type: none;">
       {% assign p = '9999' %}
-      {% for post in site.blog %}
+      {% for post in site.posts %}
         {% assign n = post.date | date: "%Y" %}
         {% if n != p %}
           {% assign p = n %}
