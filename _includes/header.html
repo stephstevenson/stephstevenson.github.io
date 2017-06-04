@@ -1,9 +1,10 @@
-<header class="site-header">
-
+{% if page.layout == 'article' %}
+    <header id="header" class="alt">
+{% else %}
+    <header id="header">
+{% endif %}
   <div class="wrapper-head">
-
     <nav class="site-nav">
-
       <div class="trigger">
         <!-- {{ site.title }} instead of blog -->
         <a class="page-link" href="{{ site.baseurl }}/">home</a>
@@ -11,13 +12,10 @@
         {% assign sorted_pages = site.pages | sort: 'key' | reverse %}
         {% for page in sorted_pages %}
           {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+            <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
           {% endif %}
         {% endfor %}
-
       </div>
     </nav>
-
   </div>
-
 </header>
