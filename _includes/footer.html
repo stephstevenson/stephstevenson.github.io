@@ -1,13 +1,14 @@
 <!-- Footer -->
 <footer id="footer">
-  <style>
+<!--  <style>
     @font-face{font-family:'FontAwesome';src:url('../fonts/fontawesome-webfont.eot?v=4.4.0');src:url('../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'),url('../fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'),url('../fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'),url('../fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'),url('../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
-    .fa-github:before{content:"\f09b";}.fa-deviantart:before{content:"\f1bd";}.fa-pintrest:before{content:"\f0d2";}.fa-twitter:before{content:"\f099";}.fa-linkedin-square:before{content:"\f08c";}.fa-envelope:before{content:"\f0e0";}
-  </style>
-  <span class="contacticon center">
-    <a href="{{ site.social.pintrest }}"><i class="fa fa-pintrest"></i></a>
+    .fa-home:before{content:"\f015";}.fa-pintrest:before{content:"\f0d2";}.fa-twitter:before{content:"\f099";}.fa-linkedin-square:before{content:"\f08c";}.fa-envelope-o:before{content:"\f003";}
+  </style> -->
+  <span class="contact-icon center">
+    <a href="{{ site.baseurl }}"><i class="fa fa-home"></i></a>
+    <a href="{{ site.social.pintrest }}"><i class="fa fa-pinterest"></i></a>
     <a href="{{ site.social.linkedin }}"><i class="fa fa-linkedin-square"></i></a>
-  	<a href="mailto:you@example.com"><i class="fa fa-envelope"></i></a>
+  	<a href="mailto:you@example.com"><i class="fa fa-envelope-o"></i></a>
     <!-- {% for socloc in site.social %}
       {% if socloc[1] %}
         {% if socloc[0] == 'email' %}
