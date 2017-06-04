@@ -15,7 +15,7 @@ $base-font-family:              Helvetica, sans-serif;
 $base-line-height:              1.5em;
 $horizontal-spacing-unit:       50px;
 $vertical-spacing-unit:         40px;
-$nav-height:                    56px;
+$nav-height:                  3.25em;
 
 /* portfolio tinkering */
 $img_spacing: 5px;
@@ -195,8 +195,9 @@ pre {
  */
 
 .wrapper {
-    max-width: -webkit-calc(800px - (#{$horizontal-spacing-unit} * 2));
-    max-width:         calc(800px - (#{$horizontal-spacing-unit} * 2));
+    max-width: -webkit-calc(900px - (#{$horizontal-spacing-unit} * 2));
+    max-width:         calc(900px - (#{$horizontal-spacing-unit} * 2));
+    // max-width: 90%;
     margin-right: auto;
     margin-left: auto;
     padding-right: calc($horizontal-spacing-unit/3);

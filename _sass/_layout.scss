@@ -4,16 +4,33 @@
 /**
  * Site header   **********************************************************
  */
-.site-header {
-    border-bottom: 1px solid $grey-color-light;
-    background-color: #fff;
-    opacity: 0.75;
+
+#header {
+    @include vendor('transition', 'background-color #{_duration(.2s)} ease');
     position:fixed;
+    background-color: #fff;
+    border-bottom: 1px solid $grey-color-light;
+    opacity: 0.85;
+    line-height: 3em;
     left:0px;
     top:0px;
-    height:56px;
+    height: 3.25em;
     width:100%;
     z-index: 50;
+    &.alt {
+		background: transparent;
+        border: none;
+        .page-link {
+            color: rgba(255,255,255,0.75);
+            line-height: $base-line-height;  // Gaps between nav items, but not on the first one
+            &:not(:first-child) {
+                margin-left: 10px;
+            }
+            &:hover, &:active {
+                color: $red;
+            }
+        }
+	}
 }
 
 .site-title {
@@ -27,8 +44,10 @@
     }
 }
 .site-nav {
+    position: absolute;
     float: right;
     line-height: $nav-height;
+    right: 1.5em;
     .page-link {
         line-height: $base-line-height;  // Gaps between nav items, but not on the first one
         &:not(:first-child) {
@@ -174,6 +193,102 @@
     font-size: 42px;
 }
 
+.post .blog-post-content {
+    font-family: _font(prose-family);
+    color: #333;
+    width: 100%;
+    padding-top: 550px;
+    h1 {
+        font-size: 64px;
+        letter-spacing: -0.02em;
+        font-weight: 800;
+        font-style: normal;
+        // font-size: 32px
+        line-height: 1.2;
+        padding-top: 16px;
+        margin-bottom: 16px;
+    }
+    h2 {
+        font-size: 48px;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+        font-style: normal;
+        line-height: 1.2;
+        padding-top: 12px;
+        margin-bottom: 10px;
+    }
+    h3 {
+        font-size: 34px;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+        font-style: normal;
+        line-height: 1.2;
+        padding-top: 8px;
+        margin-bottom: 10px;
+    }
+    h4, h5, h6 {
+        font-size: 26px;
+        letter-spacing: -0.02em;
+        font-weight: 600;
+        font-style: normal;
+        line-height: 1.2;
+        padding-top: 6px;
+        margin-bottom: 10px;
+    }
+    hr {
+        height: 1px;
+        width: 100%;
+        color: rgba(0,0,0,0.25);
+        margin: 12px auto 24px;
+    }
+    p {
+        font-weight: 400;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 25px;
+        color: #333;
+        margin: 0;
+        padding-bottom: 16px;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
+    }
+    a {
+        color: #333;
+        text-decoration: underline;
+    }
+    img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    ul, ol {
+        padding: 0 0 30px 5px;
+        margin: 0;
+    }
+    li {
+        font-size: 18px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 24px;
+        margin-left: 30px;
+        margin-bottom: 12px;
+        padding: 0;
+        padding-top: 2px;
+        p {
+            padding: 0 0 golden-ratio(1rem,  1);
+        }
+    }
+    ol li {
+        list-style-type: decimal;
+    }
+    blockquote {
+        margin: 0 0 30px;
+        margin-left: -26px;
+        border-left: 3px solid #57ad68;
+        padding-left: 20px;
+    }
+}
+
 /** Poem formatting ********************************************/
 .poem-title {
     font-size: 24px;
@@ -212,8 +327,10 @@
     // height: 245px;
     overflow: hidden;
     img {
-        width: 500px;
-        height: auto;
+        height: 245px;
+        width: auto;
+        // height: auto;
+        max-width: 500px;
         position: relative;
         left: -25%;
         top: -5%;
@@ -223,7 +340,7 @@
         position: relative;
         width: 100%;
         // height: 245px;
-        height: auto;
+        height: 250px;
         &:hover span {
             display: block;
         }
@@ -235,7 +352,7 @@
             bottom: 0;
             right: 0;
             width: auto;
-            height: auto;
+            height: 250px;
             background: rgba(0,0,0,0.4);
             color: $grey-color-light;
             padding: 40px;
@@ -247,17 +364,17 @@
 /**
  * Portfolio pages **********************************************************
 */
-.blankbox{
+.blankbox {
     background: $theme-color;
 }
-.img_row{
+.img_row {
     height: $img_height;
     width: 100%;
     overflow: hidden;
     box-sizing:border-box;
     padding: $img_spacing;
 }
-.col{
+.col {
     width: 100%;
     height: 100%;
     float: left;
@@ -265,7 +382,7 @@
     box-sizing:border-box;
     padding: $img_spacing;
 }
-.right{
+.right {
     float: right;
 }
 .one {
@@ -274,15 +391,17 @@
 .two {
     width: 66.66%;
 }
-.three{
+.three {
     width: 100%;
 }
-.caption{
+.caption {
     height: 100%;
     color: $caption_color;
     text-align: center;
     vertical-align: middle;
     font-size: $caption_font_size;
+    padding-top: 0;
+    padding-bottom: 8px;
 }
 
 .blog-header {
@@ -348,7 +467,7 @@
 
 .content {
     width: 100%;
-    max-width: 640px;
+    max-width: 700px;
     margin: 0 auto;
     // @include box-sizing(border-box),
     // @include respond-to(800)
@@ -388,6 +507,9 @@
         font-size: 14px;
         color: #b3b3b1;
         line-height: 30px;
+        text-align: center;
+        max-width: 90%;
+        margin: auto;
         a {
             color: #b3b3b1;
             text-decoration: none;
@@ -396,6 +518,31 @@
             }
         }
     }
+}
+
+.more {
+	@include vendor('transition', ('transform 0.75s ease', 'opacity 0.75s ease'));
+	@include vendor('transition-delay', '3.5s');
+	@include vendor('transform', 'translateY(0)');
+	color: inherit;
+	font-size: _font(hdr-size-xsmall);
+	height: 8.5em;
+	width: 16em;
+	left: 50%;
+	bottom: 0;
+	letter-spacing: _size(letter-spacing-alt);
+	margin-left: -8.5em;
+    padding-left: _size(letter-spacing-alt);
+    border: 0;
+	opacity: 1;
+	outline: 0;
+	text-align: center;
+	text-transform: uppercase;
+	z-index: 1;
+}
+
+#top {
+    padding: 2.5em 0 1em;
 }
 
 #search {
@@ -448,6 +595,28 @@
 		padding: 0.5em 0.5em 0.5em 2.35em;
 	}
 }
+
+.flex-images {
+    // max-width: 100%;
+    overflow: hidden;
+    .thumb {
+        display: block;
+        position: relative;
+        float: left;
+        height: 175px;
+        margin: 1px;
+        border: 1px solid #eee;
+        box-sizing: content-box;
+        overflow: hidden;
+        img {
+            display: block;
+            width: auto;
+            height: 100%;
+            margin: 0 !important;
+        }
+    }
+}
+
 // #contact {
 // 	padding: 2.5em 0 0.5em 0;
 // 	ul {
@@ -575,12 +744,13 @@
 		text-transform: uppercase;
 
 		li {
-			border-left: solid 1px _palette(fg-light);
-			display: inline-block;
+            display: inline-block;
+			border-left: solid 1px #ddd;
 			line-height: _font(hdr-lheight-smaller);
 			padding-left: 1em;
 
 			&:first-child {
+                display: inline-block;
 				border-left: 0;
 				margin-left: 0;
 				padding: 0 0.55em 0 0;
