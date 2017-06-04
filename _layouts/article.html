@@ -4,16 +4,17 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
+  {% include header.html %}
   <body itemscope itemtype="http://schema.org/Article">
     <!-- {% include header.html %} -->
     <main class="content" role="main">
       <article class="post">
         {% if page.options contains "fullhead" and page.image %}
         <div class="article-image">
-          <div class="post-image-image" style="background-image: url({% if page.image %}{{ page.image | prepend: site.baseurl }}{% endif %})">
+          <section id="banner" class="post-image-image" style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url({% if page.image %}{{ page.image | prepend: site.baseurl }}{% endif %})">
             Article Image
-          </div>
-          <div class="post-image-image2" style="background-image: url({% if page.image2 %}{{ page.image2 | prepend: site.baseurl }}{% endif %})">
+          </section>
+          <div class="post-image-image2" style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url({% if page.image2 %}{{ page.image2 | prepend: site.baseurl }}{% endif %})">
             Article Image
           </div>
           <div class="post-meta">
@@ -24,8 +25,9 @@
               on
               <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time>
             </div>
-            <div style="text-align:center">
-              <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>
+            <div style="text-align:center; margin:1em 0 0 30%;">
+              <!-- <a href="#top" class="more scrolly"></a> -->
+              <a href="#top" class="more scrolly"><i class="fa fa-angle-down"></i></a>
             </div>
           </div>
         </div>
@@ -46,7 +48,7 @@
         <br>
         {% endif %}
         <section class="blog-post-content">
-          <a name="topofpage"></a>
+          <a name="top" style="margin-top: 2.5em;"></a>
           {{content}}
         </section>
         <footer class="post-footer">
@@ -68,12 +70,12 @@
               <div class="author-image" style="background-image: url({{site.author_image | prepend: site.baseurl}})">Blog Logo</div>
               <h4>{{ site.author }}</h4>
               <p class="bio">{{author.bio}}</p>
-              <hr>
+              <hr style="width: 63%;margin-bottom:10px;">
               <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
             </section>
           </div>
           {{/post}}
-          <div class="isRight">
+          <!-- <div class="isRight">
             <h5 class="index-headline featured"><span>Supported by</span></h5>
             <footer class="site-footer">
               <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
@@ -82,7 +84,7 @@
                 <section class="copyright">All content copyright <a href="{{@blog.url}}/">{{site.author}}</a> &copy; {{ site.time | date: '%Y' }}<br>All rights reserved.</section>
               </div>
             </footer>
-          </div>
+          </div> -->
         </div>
         {%if site.disqus %}
         <div id="disqus_thread"></div>
@@ -102,15 +104,16 @@
       </article>
     </main>
     <div class="bottom-closer">
-      <div class="background-closer-image" {%if site.cover %} style="background-image: url({{ site.cover | prepend: site.baseurl }})"{% endif %}>
+      <div id="closer-image" class="background-closer-image" {% if site.cover %} style="background: linear-gradient(
+      rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url({{ site.cover | prepend: site.baseurl }});background-size:cover;"{% endif %}>
         Image
       </div>
       <div class="inner">
         <h1 class="blog-title">{{ site.title }}</h1>
         <h2 class="blog-description">{{ site.description }}</h2>
-        <a href={{ "blog/" | prepend: site.baseurl }} class="btn">Back to Posts</a>
+        <a href="{{ "blog/" | prepend: site.baseurl }}" class="btn">Back to Posts</a>
       </div>
     </div>
-    {% include scripts.html %}
+    {% include footer.html %}{% include scripts.html %}
   </body>
 </html>
