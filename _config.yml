@@ -61,7 +61,7 @@ collections:
     output: true
     permalink: /archive/:path/
 
-exclude: ['template.md', 'TODO.md']
+exclude: ['template.md', 'TODO.md', 'Resource.md']
 
 gems:
   - jemoji
