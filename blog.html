@@ -7,50 +7,17 @@ key: 4
 
 {% include title.html %}
 
-{% for post in site.blog %}
-  {% if post.redirect %}
-    <div class="img-post">
-        <div class="thumbnail">
-            <a href="{{ post.redirect }}" target="_blank">
-            {% if post.image %}
-            <img class="thumbnail" src="{{ post.image }}"/>
-            {% else %}
-            <div class="thumbnail blankbox"></div>
-            {% endif %}
-            <span>
-                <h1>{{ post.title }}</h1>
-                <br/>
-                <p>{{ post.description }}</p>
-            </span>
-            </a>
-        </div>
-    </div>
-  {% else %}
-    <div class="img-post">
-      <div class="thumbnail">
-        <a href="{{ site.baseurl }}{{ post.url }}">
-        {% if post.image %}
-          <!-- <img class="thumbnail" src="{{ post.image }}"/> -->
-          <svg class="card__image" xmlns="http://www.w3.org/2000/svg"     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1200"
-          preserveAspectRatio="xMidYMid slice">
-            <defs>
-              <clipPath id="{{ post.title }}-clip-path">
-                <polygon class="clip" points="0,1200 0,0 1920,0 1920,1200"></polygon>
-              </clipPath>
-            </defs>
-            <image clip-path="url(#{{ post.title }}-clip-path)" 
-            xlink:href="{{ post.image }}"></image>
-          </svg>
-          {% else %}
-          <div class="thumbnail blankbox"></div>
-          {% endif %}
-          <span>
-              <h1>{{ post.title }}</h1>
-              <br/>
-              <p>{{ post.description }}</p>
-          </span>
-          </a>
-      </div>
-    </div>
-  {% endif %}
-{% endfor %}
+<div class="flex-images">
+  {% for post in site.blog %}
+    <a href="{{ site.baseurl }}{{ post.url }}">
+    {% if post.image %}
+      <div class="thumb" data-w="{{ post.img-width }}" data-h="175"><img class="post-img" src="{{ post.image }}"></div>
+    {% else %}
+      <div class="thumbnail blankbox"></div>
+    {% endif %}
+  {% endfor %}
+  </a>
+</div>
+<script>
+    $('.flex-images').flexImages({rowHeight: 140});
+</script>
