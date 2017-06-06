@@ -1,3 +1,4 @@
+
 /// Makes an element's :before pseudoelement a FontAwesome icon.
 /// @param {string} $content Optional content value to use.
 @mixin icon($content: false) {
@@ -36,17 +37,20 @@
     transition: all 0.35s;
 }
 
+@mixin respond-to($breakpoint) {
+    @media only screen and (max-width: $breakpoint + px) {
+        @content;
+    }
+}
+
 /// Applies padding to an element, taking the current element-margin value into account.
 /// @param {mixed} $tb Top/bottom padding.
 /// @param {mixed} $lr Left/right padding.
 /// @param {list} $pad Optional extra padding (in the following order top, right, bottom, left)
 /// @param {bool} $important If true, adds !important.
 @mixin padding($tb, $lr, $pad: (0,0,0,0), $important: null) {
-
 	@if $important {
 		$important: '!important';
 	}
-
 	padding: ($tb + nth($pad,1)) ($lr + nth($pad,2)) max(0.1em, $tb - _size(element-margin) + nth($pad,3)) ($lr + nth($pad,4)) #{$important};
-
 }
