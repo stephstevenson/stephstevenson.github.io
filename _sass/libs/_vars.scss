@@ -24,26 +24,26 @@
 
     // Font
 	$font: (
-		prose-weight:       400,
-		prose-weight-bold:  700,
-		weight:				400,
-		weight-bold:		600,
-		weight-extrabold:	800,
-		family-fixed:	    ('Source Code Pro', 'Inconsolata', 'Monaco', monospace),
-		fixed-size:            1em,
+		prose-weight:             400,
+		prose-weight-bold:        700,
+		weight:				      400,
+		weight-bold:		      600,
+		weight-extrabold:	      800,
+		family-fixed:	         ('Source Code Pro', 'Inconsolata', 'Monaco', monospace),
+		fixed-size:               1em,
 		inline-fixed-size:     1.05em,
 		fixed-lheight:         1.75em,
-		ctrl-family:		   ('Open Sans', Helvetica, sans-serif),
-		ctrl-size-xxlarge:      15pt,
-		ctrl-size-xlarge:       13pt,
-		ctrl-size-large:        12pt,
-		ctrl-size-small:        11pt,
-		ctrl-size-xsmall:        9pt,
-		ctrl-lheight-normal:  1.65em,
-		ctrl-lheight-small:   1.35em,
-		ctrl-lheight-smaller: 1.25em,
-		ctrl-lheight-smallest: 0.9em,
-		ctrl-form-size:          1em,
+		ctrl-family:		     ('Open Sans', Helvetica, Verdana, sans-serif),
+		ctrl-size-xxlarge:       15pt,
+		ctrl-size-xlarge:        13pt,
+		ctrl-size-large:         12pt,
+		ctrl-size-small:         11pt,
+		ctrl-size-xsmall:         9pt,
+		ctrl-lheight-normal:   1.65em,
+		ctrl-lheight-small:    1.35em,
+		ctrl-lheight-smaller:  1.25em,
+		ctrl-lheight-smallest:  0.9em,
+		ctrl-form-size:           1em,
 		ctrl-form-label-size:   0.9em,
 		ctrl-bttn-size:         0.8em,
 		ctrl-bttn-bigsize:     1.35em,
@@ -55,7 +55,7 @@
 		prose-size-med:          11pt,
 		prose-size-small:        10pt,
 		prose-size-xsmall:        8pt,
-		prose-lheight-normal:  1.65em,
+		prose-lheight-med:     1.65em,
 		prose-lheight-small:   1.35em,
 		prose-lheight-smaller: 1.25em,
 		prose-lheight-smallest: 0.9em,
@@ -63,7 +63,7 @@
 		hdr-size-xxxlarge:     2.25em,
 		hdr-size-xxlarge:      1.75em,
 		hdr-size-xlarge:       1.35em,
-		hdr-size-large:       1.25em,
+		hdr-size-large:        1.25em,
 		hdr-size-normal:       1.15em,
 		hdr-size-med:           1.1em,
 		hdr-size-small:           1em,
@@ -73,19 +73,26 @@
 		hdr-lheight-large:     1.75em,
 		hdr-lheight-normal:    1.65em,
 		hdr-lheight-small:      1.5em,
-		hdr-lheight-smaller:      1em
+		hdr-lheight-smaller:      1em,
+        h1-size:                  4em,
+        h2-size:                  3em,
+        h3-size:              2.125em,
+        h4-size:              1.625em,
+        hdr-weight:               700,
+        hdr-lspacing:         -0.02em,
+        hdr-lheight:              1.2
 	);
 
     // Palette
 	$palette: (
-		bg:					#dee5e5,
+		bg:					#dee1e5,
 		// fg-bold:			#101010,
-        fg-bold:            #333332,
+        fg-bold:            rgba(0,0,0,0.8),  //#333332,
 		fg:					#4b4b4b,
 		fg-light:			rgba(0,0,0,0.4),
-		border:				rgba(0,0,0,0.125),
+		border:				rgba(0,0,0,0.175),
 		border-bg:			rgba(144,144,144,0.25),
-		border2:			#101010,
+		border2:			rgba(0,0,0,0.8),
 		border2-bg:			rgba(144,144,144,0.5),
         white:              #fafafa,
 
@@ -114,11 +121,11 @@
 		),
 
 		accent3: (
-			bg:				#b7c3f3,
+			bg:				#717c98,
 			fg-bold:		#ffffff,
-			fg:				mix(#b7c3f3, #ffffff, 25%),
-			fg-light:		mix(#b7c3f3, #ffffff, 40%),
-			shadow:         desaturate(darken(#b7c3f3, 10%), 5%),
+			fg:				mix(#717c98, #ffffff, 25%),
+			fg-light:		mix(#717c98, #ffffff, 40%),
+			shadow:         desaturate(darken(#717c98, 10%), 5%),
 			border:			rgba(0,0,0,0.125),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(0,0,0,0.25),
@@ -164,7 +171,12 @@
 	// Palette
 	// * #35393d
 	// * #4f6272
-	// * #dee5e5
-	// * #b7c3f3
+	// * #dee1e5
+	// * #717c98
 	// * #d4e4bc
 	// * #ff3636
+
+
+    // * #b7c3f3
+    // * #8aa2a9
+    // * #00272b
