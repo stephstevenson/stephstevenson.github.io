@@ -3,10 +3,9 @@ layout: article
 title: Soft Chocolate Chip Cookies
 description: a post with fullhead option
 date: 2017-06-02
-image: http://cdn.pinchofyum.com/wp-content/uploads/Chocolate-Chip-Cookies-768x1248.jpg
-img-width: 350
+image: /images/cookies.jpg
 categories: jekyll update
-tags: featured
+tags: cooking
 options: fullhead
 ---
 
