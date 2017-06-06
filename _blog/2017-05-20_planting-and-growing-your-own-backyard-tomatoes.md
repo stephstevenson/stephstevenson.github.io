@@ -4,7 +4,7 @@ title: Planting and Growing Your Own Backyard Tomatoes
 description: a post with fullhead option
 date: 2017-05-20
 image: /images/tomatoes.jpg
-categories: jekyll update
+categories: gardening
 tags: gardening
 options: nohead
 ---
