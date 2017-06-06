@@ -6,19 +6,20 @@ key: 4
 ---
 
 {% include title.html %}
-
-<div class="flex-images">
+<br>
+<div id="gallery" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 250 "gutter": 1}'>
   {% assign sorted_posts = site.blog | sort: 'date' | reverse %}
   {% for post in sorted_posts %}
-    <a href="{{ site.baseurl }}{{ post.url }}">
-    {% if post.image %}
-      <div class="thumb" data-w="{{ post.img-width }}" data-h="175"><img class="post-img" src="{{ post.image }}"></div>
-    {% else %}
-      <div class="thumbnail blankbox"></div>
-    {% endif %}
+    <div class="grid-item">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+      {% if post.image %}
+        <img class="post-img" src="/images/{{ post.image }}">
+        <h4>{{ post.title }}</h4>
+      {% else %}
+        <div class="no-image"><span>{{ post.title }}</span></div>
+      {% endif %}
+      </a>
+    </div>
   {% endfor %}
-  </a>
 </div>
-<script>
-    $('.flex-images').flexImages({rowHeight: 140});
-</script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
