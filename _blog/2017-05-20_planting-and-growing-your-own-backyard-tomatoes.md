@@ -3,7 +3,7 @@ layout: article
 title: Planting and Growing Your Own Backyard Tomatoes
 description: a post with fullhead option
 date: 2017-05-20
-image: /images/tomatoes.jpg
+image: tomatoes.jpg
 categories: gardening
 tags: gardening
 options: nohead

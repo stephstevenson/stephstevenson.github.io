@@ -3,7 +3,7 @@ layout: article
 title: Soft Chocolate Chip Cookies
 description: a post with fullhead option
 date: 2017-06-02
-image: /images/cookies.jpg
+image: cookies.jpg
 categories: jekyll update
 tags: cooking
 options: fullhead
@@ -25,7 +25,7 @@ Wait, though. They are singing a love song to you: **BAKE ME**.
 
 <hr>
 
-### How to Make Our Soft Chocolate Chip Cookies:
+##### How to Make Our Soft Chocolate Chip Cookies:
 <iframe width="580" height="315" src="http://www.youtube.com/embed/JdbGVDYu4mQ" frameborder="0" allowfullscreen></iframe>
 <!-- [![embedded video](https://img.youtube.com/vi/JdbGVDYu4mQ/0.jpg)](https://www.youtube.com/watch?v=JdbGVDYu4mQ) -->
 
