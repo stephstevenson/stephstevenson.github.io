@@ -3,7 +3,7 @@ layout:
 ---
 
 [
-  {% for post in site.posts %}
+  {% for post in site.blog %}
     {
       "title"    : "{{ post.title | escape }}",
       "category" : "{{ post.category }}",
