@@ -1,16 +1,16 @@
 ---
 layout: article
 title: Planting and Growing Your Own Backyard Tomatoes
-description: a post with fullhead option
+description: With the official start of Spring, it’s time to start thinking about growing your own backyard tomatoes.
 date: 2017-05-20
 image: tomatoes.jpg
-categories: gardening
+category: gardening
 tags: gardening
 options: nohead
 ---
 
 #### Planting and Growing Your Own Backyard Tomatoes
-With the official start of spring, it’s time to start thinking about growing your own backyard tomatoes.
+With the official start of Spring, it’s time to start thinking about growing your own backyard tomatoes.
 
 If you’re an expert backyard tomato grower already, we invite you to share your tips and tricks in the comments section below. If you’re a beginner, this five-step process might help you get started. Before we start, we’d like to send a special thanks to Guy Esposito, our Head Chef Mary Ann Esposito’s husband, for helping us write this blog post!
 <br>

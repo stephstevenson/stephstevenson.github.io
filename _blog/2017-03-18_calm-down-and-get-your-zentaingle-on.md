@@ -4,7 +4,7 @@ title: Calm Down and Get Your Zentangle On
 description: another post with an image and halfhead option
 date: 2017-03-18
 image: zentangle.jpg
-categories: art
+category: art
 tags: art, zentangle, drawing, doodling
 options: halfhead
 ---

@@ -4,7 +4,7 @@ title: Lorem Ipsum
 description: a post without an image and nohead option
 date: 2016-12-30
 image:
-categories:
+category:
 tags: lorem, ipsum
 options: nohead
 ---

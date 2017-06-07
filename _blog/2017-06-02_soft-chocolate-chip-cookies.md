@@ -1,10 +1,10 @@
 ---
 layout: article
 title: Soft Chocolate Chip Cookies
-description: a post with fullhead option
+description: Is there anything better than a fresh batch of soft chocolate chip cookies? I think not. (a post with fullhead option)
 date: 2017-06-02
 image: cookies.jpg
-categories: jekyll update
+category: cooking
 tags: cooking
 options: fullhead
 ---
