@@ -24,11 +24,10 @@
 
     // Font
 	$font: (
-		prose-weight:             400,
-		prose-weight-bold:        700,
-		weight:				      400,
-		weight-bold:		      600,
-		weight-extrabold:	      800,
+        thin:                     100,
+		normal:				      400,
+		bold:		              700,
+		extrabold:	              800,
 		family-fixed:	         ('Source Code Pro', 'Inconsolata', 'Monaco', monospace),
 		fixed-size:               1em,
 		inline-fixed-size:     1.05em,
