@@ -1,14 +1,13 @@
 {% if page.layout == 'article' %}
-    <header id="header" class="alt">
+    <header id="header" class="navbar">
 {% else %}
-    <header id="header">
+    <header id="header" class="navbar">
 {% endif %}
   <div class="wrapper-head">
     <nav class="site-nav">
       <div class="trigger">
         <!-- {{ site.title }} instead of blog -->
         <a class="page-link" href="{{ site.baseurl }}/">home</a>
-
         {% assign sorted_pages = site.pages | sort: 'key' | reverse %}
         {% for page in sorted_pages %}
           {% if page.title %}
@@ -19,3 +18,19 @@
     </nav>
   </div>
 </header>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+(function($) {
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 225) {
+                $('#header').fadeIn(500);
+                // $('#header').css('color', 'rgba(0,0,0,0.7)', 'background': 'rgba(255,255,255,0.85)');
+            } else {
+                $('#header').fadeOut(500);
+                // $('#header').css('color': 'rgba(255,255,255,0.9)', 'background': 'transparent');
+            }
+        });
+    });
+})(jQuery);
+</script>
