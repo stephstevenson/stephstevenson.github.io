@@ -44,7 +44,8 @@ body {
     top:0px;
     height: 3.25em;
     width:101%;
-    z-index: 50;
+    z-index: 9999;
+    display: block;
     &.alt {
 		background: transparent;
         border: none;
@@ -55,7 +56,8 @@ body {
                 margin-left: 10px;
             }
             &:hover, &:active {
-                color: $red;
+                color: $theme-color;
+                // font-weight: 400;
             }
         }
 	}
@@ -84,6 +86,7 @@ body {
         }
         &:hover, &:active {
             color: $theme-color;
+            // font-weight: 400;
         }
     }
     @include media-query($on-palm) {
@@ -102,12 +105,12 @@ body {
 }
 
 .title-container {
+    display: block;
+    position: relative;
+    font-size: _font(ctrl-lheight-smaller);
+    opacity: 0.75;
     left: 0px;
     top: 0px;
-    position: relative;
-    font-size: 20px;
-    display: block;
-    opacity: 0.75;
     width: 100%;
     text-align: center;
     padding-top: 25px;
@@ -125,6 +128,73 @@ body {
 }
 .wrapper-head {
     margin: 0 45px;
+}
+
+/**
+ * Landing ***************************************************************
+ */
+.post-card {
+    width: 88% !important;
+    margin: 2em auto 1em;
+    overflow: hidden;
+    .card-img  {
+        display: inline-block;
+        width: 35% !important;
+        float: left;
+        img {
+            display: inline-block;
+            width: 100% !important;
+            height: auto !important;
+            overflow: hidden;
+        }
+    }
+    .card-content {
+        display: inline-block;
+        width: 60% !important;
+        overflow: hidden;
+        padding: 0 0 0 1.5em;
+        .card-category {
+            background: mix($theme-color, #fff, 80%);
+            color: _palette(white);
+            font-size: 14.5px;
+            // width: 15.5%;
+            padding: 0px 6px 1px;
+            float: left;
+            border-radius: 3px;
+            white-space: nowrap;
+        }
+        .card-title {
+            font-size: 1.75em;
+            font-weight: 500;
+            line-height: 1.6;
+            color: _palette(accent2, bg);
+            width: 90%;
+            text-overflow: ellipsis !important;
+            white-space: nowrap;
+            overflow: hidden;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+        .card-desc {
+            font-size: 15px;
+            line-height: 1.4;
+            margin: 0 0 4px 4px;
+        }
+        #date {
+            font-family: _font(ctrl-family);
+            font-size: 10pt;
+            font-weight: _font(thin);
+            line-height: _font(prose-lheight-smallest);
+            color: _palette(fg-light);
+            margin-left: 10px;
+            &:before {
+                font-family: "FontAwesome";
+                position: relative;
+                margin-right: 7px;
+            }
+        }
+    }
 }
 
 /**
@@ -206,7 +276,7 @@ body {
     h1 {
         font-size: _font(h1-size);
         letter-spacing: _font(hdr-lspacing);
-        font-weight: _font(weight-extrabold);
+        font-weight: _font(extrabold);
         line-height: _font(hdr-lheight);
         font-style: normal;
         padding-top: 16px;
@@ -1236,7 +1306,6 @@ pre {
 		margin: 0 0 0.75em 0;
 		a {
 			color: $theme-color;
-
 			&:hover {
 				color: mix(desaturate($theme-color,20%), #ffffff, 75%);
 			}
@@ -1262,7 +1331,8 @@ pre {
                 bottom: 1px;
             }
             &:hover, &:active {
-                color: desaturate($theme-color, 10%);
+                color: _palette(accent1, fg);
+                // color: desaturate($theme-color, 40%);
                 opacity: 0.75;
             }
         }
@@ -1279,9 +1349,9 @@ pre {
 
 		li {
             display: inline-block !important;
-			border-left: solid 1px _palette(accent1, fg-light) !important;
+			border-left: solid 1px mix(#35393d, #ffffff, 80%) !important;
 			line-height: _font(hdr-lheight-smaller) !important;
-			padding: 2px 0 2px 1em !important;
+			padding: 1px 0 1px 1em !important;
 
 			&:first-child {
 				border-left: 0 !important;
@@ -1293,7 +1363,7 @@ pre {
 				color: inherit;
                 text-decoration: none;
 				&:hover {
-					color: $theme-color;
+					color: desaturate(darken($theme-color, 5%), 15%);
 				}
 			}
 
