@@ -63,6 +63,7 @@
           <br>
           <a name="top"></a>
           {{content}}
+          <a href="#" id="back-to-top" title="Back to top"><img src="/images/arrow.png" alt="Back to top"></a>
         </section>
 
         <div class="bottom-teaser cf">
@@ -108,5 +109,31 @@
       </div>
     {% endif %}
     {% include footer.html %}{% include scripts.html %}
+    <script type="text/javascript">
+    if ($('#back-to-top').length) {
+        var scrollTrigger = 200, // px
+            backToTop = function () {
+                var scrollTop = $(window).scrollTop();
+                var footer = (Math.max($(document).height(), $(window).height())-750);
+                console.log(scrollTop);
+                console.log(footer);
+                if (scrollTop > scrollTrigger && scrollTop < footer) {
+                    $('#back-to-top').addClass('show');
+                } else {
+                    $('#back-to-top').removeClass('show');
+                }
+            };
+        backToTop();
+        $(window).on('scroll', function () {
+            backToTop();
+        });
+        $('#back-to-top').on('click', function (e) {
+            e.preventDefault();
+            $('html,body').animate({
+                scrollTop: 0
+            }, 700);
+        });
+    }
+    </script>
   </body>
 </html>
