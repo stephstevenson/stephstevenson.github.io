@@ -16,7 +16,7 @@ name: 'Stephanie Stevenson'
 author: 'Stephanie Stevenson'
 author_image: "/images/avatar.png"
 cover: "/images/cover.jpg"
-logo: "/images/logo.jpg"
+logo: "/images/logo.png"
 
 social:
   # github:
@@ -61,7 +61,7 @@ collections:
     output: true
     permalink: /archive/:path/
 
-exclude: ['template.md', 'TODO.md', 'Resource.md']
+exclude: ['template.md', 'TODO.md', 'mediator.html', 'Resource.md']
 include: ['_pages','_projects','_designs','.htaccess']
 defaults:
   - scope:
