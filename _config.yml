@@ -61,7 +61,7 @@ collections:
     output: true
     permalink: /archive/:path/
 
-exclude: ['template.md', 'TODO.md', 'mediator.html', 'Resource.md']
+exclude: ['template.md', 'TODO.md', README.md, 'Gulpfile.js', 'package.json', 'node_modules', 'jspm_packages']
 include: ['_pages','_projects','_designs','.htaccess']
 defaults:
   - scope:
