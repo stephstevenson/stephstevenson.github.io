@@ -38,3 +38,10 @@ tags:  # comma-seperated list of descriptors
 <br>
 
 #### For more info check out the [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images)
+
+#### Copyright-Free Images:
+  * https://pixabay.com
+  * https://www.pexels.com
+  * https://unsplash.com
+  * https://negativespace.co
+  * http://deathtothestockphoto.com
