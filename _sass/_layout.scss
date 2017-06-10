@@ -47,6 +47,10 @@ body {
     height: 3.25em;
     width:101%;
     z-index: 9999;
+    &:hover, &:active {
+        color: $theme-color;
+        // font-weight: 400;
+    }
     .page-link {
         color: rgba(255,255,255,0.9);
         line-height: $base-line-height;  // Gaps between nav items, but not on the first one
@@ -439,8 +443,6 @@ body {
     height: 42px;
     text-align: center;
     line-height: 30px;
-    // background: #f5f5f5;
-    // color: #444;
     cursor: pointer;
     border: 0;
     border-radius: 2px;
@@ -449,7 +451,6 @@ body {
     opacity: 0;
 }
 #back-to-top:hover {
-    // background: #e9ebec;
     opacity: 0.9;
 }
 #back-to-top.show {
@@ -1019,6 +1020,12 @@ body {
             font-family: _font(ctrl-family);
             text-transform: none;
         }
+        p {
+            font-size: 11.5pt;
+        }
+        strong {
+            color: darken(_palette(fg), 2%);
+        }
         img {
             max-width: 100%;
             max-height: 900px;
@@ -1047,7 +1054,7 @@ body {
     }
     .bottom-teaser {
         width: 80%;
-        margin: 0 auto;
+        margin: 0 auto 1.5em;
         padding: 50px 0 30px;
         font-family: _font(ctrl-family);
         hr {
@@ -1263,6 +1270,15 @@ pre {
     }
 }
 
+.contacticon {
+    font-size: 35px;
+    display:block;
+    margin: 10px;
+}
+.center {
+    text-align: center;
+}
+
 
 /**
  * Contact **********************************************************
@@ -1273,12 +1289,10 @@ pre {
 	padding: 2.5em 0 0.5em 0;
 	ul {
         list-style: none;
-	    // padding: 2.5em 0 1em 0;
 	}
     #name {
         display: inline-block !important;
         width: 40% !important;
-        // margin-right: 2% !important;
         float: left;
     }
     #email {
@@ -1357,29 +1371,6 @@ pre {
 		left: -5px;
 		font-size: 1.4em;
 	}
-	// #button {
-	// 	margin-bottom: 3em;
-	// 	font-size: _font(hdr-size-small);
-	// 	box-shadow: 0 3px 0 0 _palette(accent6, shadow);
-    //     .ico-home:before {
-	// 		position: relative;
-	// 		top: 2px;
-	// 		left: -5px;
-    //         font-size: _font(hdr-size-normal);
-	// 		margin-right: 0 0.1em;
-    //     }
-	// 	a {
-	// 		position: relative;
-    //         font-size: _font(hdr-size-small);
-    //         line-height: _font(hdr-lheight-small);
-	// 		top: -1.4px;
-	// 		left: -9px;
-	// 		text-align: left;
-	// 		margin-top: 0.95em;
-	// 		margin-left: 10%;
-    //         margin-bottom: 10px;
-	// 	}
-	// }
 }
 
 .input {
