@@ -2,14 +2,14 @@
 layout: article
 title: Calm Down and Get Your Zentangle On
 description: another post with an image and halfhead option
-date: 2017-03-18
+date: 2017-05-09
 image: zentangle.jpg
-category: art
+category: drawing
 tags: art, zentangle, drawing, doodling
 options: halfhead
 ---
 
-##### Zentangle is a self-help art therapy practice to enhance relaxation and focus.
+##### Zentangle is a self-help art therapy practice to enhance relaxation and focus
 
 <br>
 
