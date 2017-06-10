@@ -2,6 +2,7 @@ _site
 .sass-cache
 .DS_store
 node_modules/*
+jspm_packages/*
 gulpconfig.json
 images/AI/*
 TODO.md
