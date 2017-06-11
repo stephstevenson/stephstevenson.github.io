@@ -31,3 +31,15 @@ key: 3
     {% endfor %}
   </ul>
 </div>
+<script src="{{ site.baseurl }}/js/jekyll-search.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '{{ site.baseurl }}/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 6,
+    fuzzy: true,
+    exclude: ['Welcome']
+  })</script>
