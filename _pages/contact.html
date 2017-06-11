@@ -3,6 +3,7 @@ key: 1
 title: contact
 desc: Get in touch
 permalink: /contact/
+options: nomenu
 script-includes:
   - /js/jquery.validate.min.js
 script: |
@@ -44,9 +45,9 @@ script: |
         <input type="text" name="country" id="country" value=""
         placeholder="What animal is this emoji?  =^.^=" />
       </div>
-        <ul class="actions">
-          <li><input type="submit" value="Send Message" class="bottom button" style="margin-top:1.5em;"/></li>
-        </ul>
+        <div class="actions">
+          <input type="submit" value="Send Message" id="button" class="bottom button"/>
+      </div>
     </div>
     <input type="hidden" name="success"
            value="{{ '/contact-success' | prepend: site.baseurl | prepend: site.url }}" />
