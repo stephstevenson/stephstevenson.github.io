@@ -22,10 +22,10 @@ social:
   # github:
   # deviantart:
   # dribbble:
-  # linkedin-square:
   # twitter:
-  pintrest: https://pintrest.com/
-  email: /contact/
+  pinterest: https://pintrest.com/
+  linkedin-square: https://linkedin.com/
+  # email: /contact/
   #flickr:
   #spotify:
   #stack-overflow:
@@ -62,7 +62,7 @@ collections:
     permalink: /archive/:path/
 
 exclude: ['template.md', 'TODO.md', README.md, 'Gulpfile.js', 'package.json', 'node_modules', 'jspm_packages']
-include: ['_pages','_projects','_designs','.htaccess']
+include: ['_pages','.htaccess']
 defaults:
   - scope:
       path: _pages
