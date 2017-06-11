@@ -9,19 +9,7 @@
         {{ content }}
       </div>
     </div>
-    {% include footer.html %} {% include scripts.html %}
-    <script src="{{ site.baseurl }}/js/jekyll-search.js" type="text/javascript"></script>
-
-    <script type="text/javascript">
-      SimpleJekyllSearch({
-        searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('results-container'),
-        json: '{{ site.baseurl }}/search.json',
-        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
-        noResultsText: 'No results found',
-        limit: 6,
-        fuzzy: true,
-        exclude: ['Welcome']
-      })</script>
+    {% unless page.options contains "nofooter" %}{% include footer.html %}{% endunless %}
+    {% include scripts.html %}
   </body>
 </html>
