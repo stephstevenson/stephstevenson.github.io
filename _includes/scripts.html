@@ -22,7 +22,7 @@
           .css('opacity', 1-Math.max(top/700, 0));
       });
       $window.trigger('scroll');
-      var height = $('.article-image').height();
+      var height = $('.post-image').height();
       $('.post-content').css('padding-top', height + 'px');
       $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
