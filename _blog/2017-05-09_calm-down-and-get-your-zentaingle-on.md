@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 title: Calm Down and Get Your Zentangle On
 description: another post with an image and halfhead option
 date: 2017-05-09

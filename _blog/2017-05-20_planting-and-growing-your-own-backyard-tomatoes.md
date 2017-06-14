@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 title: Planting and Growing Your Own Backyard Tomatoes
 description: With the official start of Spring, it’s time to start thinking about growing your own backyard tomatoes.
 date: 2017-05-20

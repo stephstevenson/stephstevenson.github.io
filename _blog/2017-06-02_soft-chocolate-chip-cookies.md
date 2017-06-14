@@ -1,9 +1,10 @@
 ---
-layout: article
+layout: post
 title: Soft Chocolate Chip Cookies
 description: Is there anything better than a fresh batch of soft chocolate chip cookies? I think not. (a post with fullhead option)
 date: 2017-06-02
 image: cookies.jpg
+thumb: /thumbnails/cookies.jpg
 category: cooking
 tags: cooking
 options: fullhead
