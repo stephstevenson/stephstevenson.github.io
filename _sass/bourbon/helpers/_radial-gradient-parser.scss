@@ -1,11 +1,16 @@
 @function _radial-gradient-parser($image) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `_radial-gradient-parser` is " +
+    "deprecated and will be removed in 5.0.0.";
+  }
+
   $image: unquote($image);
   $gradients: ();
   $start: str-index($image, "(");
   $end: str-index($image, ",");
   $first-val: str-slice($image, $start + 1, $end - 1);
 
-  $prefix: str-slice($image, 0, $start);
+  $prefix: str-slice($image, 1, $start);
   $suffix: str-slice($image, $end, str-length($image));
 
   $is-spec-syntax: str-index($first-val, "at");
@@ -18,7 +23,7 @@
     $gradients: (
       webkit-image: -webkit- + $prefix + $pos + $suffix,
       spec-image: $image
-    )
+    );
   }
 
   @else if $is-spec-syntax == 1 {
@@ -27,7 +32,7 @@
     $gradients: (
       webkit-image: -webkit- + $prefix + $pos + $suffix,
       spec-image: $image
-    )
+    );
   }
 
   @else if str-index($image, "cover") or str-index($image, "contain") {
@@ -36,14 +41,14 @@
     $gradients: (
       webkit-image: null,
       spec-image: $image
-    )
+    );
   }
 
   @else {
     $gradients: (
       webkit-image: -webkit- + $image,
       spec-image: $image
-    )
+    );
   }
 
   @return $gradients;

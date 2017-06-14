@@ -1,5 +1,10 @@
-@function _radial-arg-parser($G1, $G2, $pos, $shape-size) {
-  @each $value in $G1, $G2 {
+@function _radial-arg-parser($g1, $g2, $pos, $shape-size) {
+  @if $output-bourbon-deprecation-warnings == true {
+    @warn "[Bourbon] [Deprecation] `_radial-arg-parser` is " +
+    "deprecated and will be removed in 5.0.0.";
+  }
+
+  @each $value in $g1, $g2 {
     $first-val: nth($value, 1);
     $pos-type:  type-of($first-val);
     $spec-at-index: null;
@@ -22,7 +27,7 @@
           $pos: $pos nth($value, $i);
         }
       }
-      $G1: null;
+      $g1: null;
     }
 
     // If not spec calculate correct values
@@ -37,8 +42,8 @@
 
           $pos: $value;
 
-          @if $pos == $G1 {
-            $G1: null;
+          @if $pos == $g1 {
+            $g1: null;
           }
         }
 
@@ -54,16 +59,16 @@
 
           $shape-size: $value;
 
-          @if $value == $G1 {
-            $G1: null;
+          @if $value == $g1 {
+            $g1: null;
           }
 
-          @else if $value == $G2 {
-            $G2: null;
+          @else if $value == $g2 {
+            $g2: null;
           }
         }
       }
     }
   }
-  @return $G1, $G2, $pos, $shape-size;
+  @return $g1, $g2, $pos, $shape-size;
 }
