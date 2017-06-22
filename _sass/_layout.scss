@@ -942,12 +942,12 @@ html, body {
     width: 100%;
     .post-image {
         position: relative;
-        background-color: _palette(accent1, bg);
+        background-color: _palette(bg);
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         overflow: hidden;
         @media(min-width: 300px) {
             #banner {
