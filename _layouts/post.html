@@ -5,6 +5,7 @@
 <html>
   {% include head.html %}
   {% include header.html %}
+  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <body itemscope itemtype="http://schema.org/Article">
     <main class="content" role="main">
       <article class="post">
