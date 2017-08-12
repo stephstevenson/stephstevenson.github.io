@@ -1,6 +1,6 @@
 # Site settings
 title: could be
-email: you@example.com
+email: couldbesteph@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   A wonderful blog of wonderful things.
 owner:
@@ -24,6 +24,7 @@ social:
   # deviantart:
   # dribbble:
   # twitter:
+  etsy: https://www.etsy.com/people/4waoj5bb
   pinterest: https://pintrest.com/
   linkedin-square: https://linkedin.com/
   # email: /contact/
