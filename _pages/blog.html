@@ -1,22 +1,27 @@
 ---
 layout: page
-title: blog
+title: Blog
 permalink: /blog/
 key: 4
 ---
 
 {% include title.html %}
 <br>
-<div id="gallery" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 250 "gutter": 1}'>
+<div id="gallery" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 250, "isAnimated": true, "isFitWidth": true, "gutter": 1}'>
   {% assign sorted_posts = site.blog | sort: 'date' | reverse %}
   {% for post in sorted_posts %}
     <div class="grid-item">
       <a href="{{ site.baseurl }}{{ post.url }}">
       {% if post.image %}
-        <img class="post-img" src="/images/{{ post.image }}">
+        {% if post.thumb %}
+          <img class="post-img" src="/images/thumbnails/{{ post.image }}">
+        {% else %}
+          <img class="post-img" src="/images/{{ post.image }}">
+        {% endif %}
         <h4>{{ post.title }}</h4>
       {% else %}
-        <div class="no-image"><span>{{ post.title }}</span></div>
+        <div class="no-image"></div>
+        <span class="no-image-title">{{ post.title }}</span>
       {% endif %}
       </a>
     </div>
