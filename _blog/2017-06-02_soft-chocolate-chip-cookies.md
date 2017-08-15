@@ -32,7 +32,7 @@ Wait, though. They are singing a love song to you: **BAKE ME**.
 
 ![another cookie image](http://cdn.pinchofyum.com/wp-content/uploads/cookie-cross-section-2-768x1152.jpg)
 
-A few years ago, when we were living in the Philippines, I accidentally discovered my new favorite way to make cookies. The recipe is now two years old, but if you like to creep, they can be located here.
+A few years ago, when we were living in the Philippines, I accidentally discovered my new favorite way to make cookies. The recipe is now two years old, but if you like to creep, they can be located here. Making a change.
 
 And let me just take a moment to acknowledge that seriously without fail – everything good that I make is always inspired by haphazard accidents, including but not limited to broken refrigerators and lacking ingredients and my really strong tendency towards laziness. Everything including these cookies and all their iterations.
 
