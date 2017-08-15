@@ -1,47 +1,22 @@
----
+--- 
 layout: article
-title:  # title goes here
+title:  Playing with Puppies # title goes here
 description: # description goes here
-date: 2017-05-28 # post date goes here (YYYY-MM-DD)
+date: 2017-08-13 # post date goes here (YYYY-MM-DD)
 image: tunnel.jpg # the name of the image in the 'images' folder that shows up in the grid goes here
 options: # fullhead/halfhead/nohead, and/or closer --> options must be comma-separated
 category:  # ie: cooking/gardening/drawing
 tags:  # comma-seperated list of descriptors
----
-
-<!-- You will also want to name the blog post file using the following conventions: "YYYY-MM-DD_post-title.md"  -->
+---  
 
 
-## Make a new post
-  1. Create a new '.md' file in the \_blog folder
-  2. Copy the above front-matter to the top of the new blog post you want to make
-<br>
-<hr>
+# Playing with Puppies
 
-## Markdown syntax
-  * #H1 - ```#H1```
-  * ##H2 - ```##H2```
-  * ###H3 - ```###H3```
-  * *italics* - ```*italics*```
-  * **bold** - ```**bold**```
-  * ***bold/italics*** - ```***bold/italics***```
-  * ordered list - ```  1. ```
-  * unordered list - ```  * ```
-  * [link](https://stephstevenson.github.io) - ```[link](https://stephstevenson.github.io)```
-  * ![example/tooltip](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1") - ```![example/tooltip](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")```
+*This* **is** a [link](http://puppies.com), ~~go there~~.
 
-### Other
-  * >block quotes - ```>block quotes```
-  * new-line - ```<br>```
-  * horizontal-line - ```_______``` or or ```*****``` or ```<hr>```
 
-<br>
+![img](http://cdn1-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-2.jpg)
 
-#### For more info check out the [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images)
-
-#### Copyright-Free Images:
-  * https://pixabay.com
-  * https://www.pexels.com
-  * https://unsplash.com
-  * https://negativespace.co
-  * http://deathtothestockphoto.com
+* One
+* Two 
+* 

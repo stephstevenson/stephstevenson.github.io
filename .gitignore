@@ -18,3 +18,5 @@ js/jekyll-search.js
 js/main.js
 js/scroll-top.js
 js/util.js
+Gemfile.lock
+template.md
