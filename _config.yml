@@ -71,6 +71,20 @@ defaults:
     values:
       layout: page
 
-gems:
+plugins:
   - jemoji
   - jekyll-paginate
+  
+html_proofer:
+  check_favicon: true
+  check_html: true
+  allow_hash_href: true
+  http_status_ignore: [999,403]
+  file_ignore:
+    - /a.*regexp*/
+    - a_string
+  url_ignore:
+    - /Hyde/
+    - /PlayMusic/
+    - /Atomic-Design-UI/
+    - /GithubCalendar/
