@@ -23,7 +23,7 @@
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.author }}</h4>
               <span id="date">on <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></span>
               </div>
-              <div style="text-align:center; width:100%; margin:1em auto 0;">
+              <div style="text-align:center; width:100%; margin:6.5em auto 0;">
                 <a href="#top" class="more scrolly"><i class="fa fa-angle-down"></i></a>
               </div>
             </div>
@@ -61,16 +61,16 @@
           <br>
           <a name="top"></a>
           {{content}}
-          <a href="#" id="back-to-top" title="Back to top"><img src="/images/arrow.png" alt="Back to top"></a>
+          <a href="#" id="back-to-top" title="Back to top"><img alt="Back to top" src="{{ '/images/arrow.png' | prepend: site.baseurl }}"></a>
         </section>
 
         <div class="bottom-teaser cf">
           <div class="isLeft">
             <h5 class="index-headline featured"><span>Written by</span></h5>
             <section class="author">
-              <div class="author-image" style="background-image: url({{site.author_image | prepend: site.baseurl}})">Blog Logo</div>
+              <div class="author-image" style="background-image: url({{ site.author_image | prepend: site.baseurl }})">Blog Logo</div>
               <h4>{{ site.author }}</h4>
-              <p class="bio">{{author.bio}}</p>
+              <p class="bio">{{ author.bio }}</p>
               <hr style="width: 63%;margin-top:10px;margin-bottom:8px;">
               <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
             </section>
