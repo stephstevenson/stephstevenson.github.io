@@ -21,5 +21,6 @@ gem 'jekyll', '>= 3.1.2'
 # end
 gem 'github-pages'
 gem 'bourbon'
+gem 'html-proofer'
 gem 'jemoji'
 gem 'exifr'
