@@ -14,9 +14,9 @@ key: 4
       <a href="{{ site.baseurl }}{{ post.url }}">
       {% if post.image %}
         {% if post.thumb %}
-          <img class="post-img" src="/images/thumbnails/{{ post.image }}">
+          <img class="post-img" alt="{{ post.title }}" src="/images/thumbnails/{{ post.image }}">
         {% else %}
-          <img class="post-img" src="/images/{{ post.image }}">
+          <img class="post-img" alt="{{ post.title }}" src="/images/{{ post.image }}">
         {% endif %}
         <h4>{{ post.title }}</h4>
       {% else %}
@@ -27,5 +27,6 @@ key: 4
     </div>
   {% endfor %}
 </div>
+
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
-<script type="text/javascript" src="{{ "/js/masonry.pkgd.js" | prepend: site.baseurl  }}"></script>
+<script type="text/javascript" src="{{ '/js/masonry.pkgd.js' | prepend: site.baseurl }}"></script>
