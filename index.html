@@ -10,28 +10,30 @@ layout: default
       <h2><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
       <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
       <p>{{ post.description }}</p>
-      <hr/>
+      <hr>
     </li>
   {% endfor %}
 </ul>
 {% assign sorted_posts = site.blog | sort: 'date' | reverse %}
 {% for post in sorted_posts | limit:3 %}
   <section class="post-card">
-    <section class="card-img">
-      <a href="{{ site.baseurl }}{{ post.url }}"><img src="/images/{{ post.image }}"></a>
-    </section>
+    <a href="{{ post.url | prepend: site.baseurl }}">
+      <section class="card-img">
+        <img alt="{{ post.title }}" src="{{ post.image | prepend: '/images/' | prepend: site.baseurl }}">
+      </section>
+    </a>
     <section class="card-content">
       {% if post.category %}
         <div class="card-category">{{ post.category }}</div>
       {% endif %}
-      <a href="{{ site.baseurl }}{{ post.url }}">
+      <a href="{{ post.url | prepend: site.baseurl }}">
         <h3 class="card-title">{{ post.title }}</h3>
       </a>
       <p class="card-desc">{{ post.description | strip_html | truncatewords: 18 }}</p>
-      <span id="date" class="fa fa-calendar">{{ post.date  | date: '%B %d, %Y' }}</span>
+      <span class="fa fa-calendar card-date">{{ post.date  | date: '%B %d, %Y' }}</span>
     </section>
   </section>
-  <hr style="width:88%;margin:auto;">
+  <hr class="post-hr">
 {% endfor %}
 <div class="bottom">
     <div class="button">
