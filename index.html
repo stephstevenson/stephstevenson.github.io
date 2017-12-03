@@ -29,8 +29,8 @@ layout: default
       <a href="{{ post.url | prepend: site.baseurl }}">
         <h3 class="card-title">{{ post.title }}</h3>
       </a>
-      <p class="card-desc">{{ post.description | strip_html | truncatewords: 18 }}</p>
-      <span class="fa fa-calendar card-date">{{ post.date  | date: '%B %d, %Y' }}</span>
+      <p class="card-desc">{{ post.description | strip_html | truncatewords: 19 }}</p>
+      <span class="fa fa-calendar card-date">{{ post.date  | date: '%b %d, %Y' }}</span>
     </section>
   </section>
   <hr class="post-hr">
