@@ -1,3 +1,5 @@
+@import 'bourbon/bourbon';
+
 /**
  * Reset some basic elements
  */
@@ -24,18 +26,18 @@ $caption_font_size: 12px;
 $caption_color: #aaa;
 
 /* COLORS  */
-$red:  #FF3636;
-$orange: #F29105;
-$blue: #2698BA;
-$green: #11D68B;
-$lime_green: #B7D12A;
-$purple: #B509AC;
+$red:  #ff3636;
+$orange: #f29105;
+$lime_green: #b7d12a;
+$green: #11d68b;
+$blue: #2698ba;
+$purple: #b509ac;
 
 
-$grey-color-dark: #333;   /* footer */
+$grey-color-dark:  #333;   /* footer */
 $grey-color-light: #ddd;  /* navigation bar border */
-$text-color:     #666;
-
+$text-color:       #666;
+$caption_color:    #aaa;
 /* Set theme color *************************/
 $theme-color:   $red;
 
@@ -46,12 +48,12 @@ $theme-color:   $red;
  * Basic styling
  */
 body {
+    background-color: $background-color;
+    color: $text-color;
     font-family: $base-font-family;
     font-size: $base-font-size;
-    line-height: $base-line-height;
     font-weight: 100;
-    color: $text-color;
-    background-color: $background-color;
+    line-height: $base-line-height;
     -webkit-text-size-adjust: 100%;
 }
 
@@ -63,7 +65,7 @@ body {
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $vertical-spacing-unit / 2;
+    @include calc('margin-bottom', $vertical-spacing-unit / 2)
 }
 
 .alignright {
@@ -108,7 +110,7 @@ ul, ol {
 li {
     > ul,
     > ol {
-         margin-bottom: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -154,11 +156,11 @@ article a {
  * Blockquotes
  */
 blockquote {
+    @include calc('padding-left', $horizontal-spacing-unit / 2);
     color: $text-color;
-    border-left: 10px solid $grey-color-light;
-    padding-left: $horizontal-spacing-unit / 2;
     font-size: 18px;
     font-style: italic;
+    border-left: 10px solid $grey-color-light;
 
     > :last-child {
         margin-bottom: 0;
@@ -172,9 +174,9 @@ blockquote {
  */
 pre,
 code {
+    background-color: $grey-color-light;
     font-size: 15px;
     border-radius: 3px;
-    background-color: $grey-color-light;
 }
 
 code {
@@ -197,22 +199,17 @@ pre {
 /**
  * Wrapper
  */
-
 .wrapper {
-    max-width: -webkit-calc(900px - (#{$horizontal-spacing-unit} * 2));
-    max-width:         calc(900px - (#{$horizontal-spacing-unit} * 2));
-    // max-width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: calc($horizontal-spacing-unit/3);
-    padding-left: calc($horizontal-spacing-unit/3);
+    @include calc('max-width', 975px - ($horizontal-spacing-unit * 2));
+    @include calc('padding-left', $horizontal-spacing-unit / 3);
+    @include calc('padding-right', $horizontal-spacing-unit / 3);
+    margin: 0 auto;
     @extend %clearfix;
 
     @include media-query($on-laptop) {
-        max-width: -webkit-calc(800px - (#{$horizontal-spacing-unit}));
-        max-width:         calc(800px - (#{$horizontal-spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
+        @include calc('max-width', 800px - ($horizontal-spacing-unit));
+        @include calc('padding-left', $spacing-unit / 2);
+        @include calc('padding-right', $spacing-unit / 2);
     }
 }
 
