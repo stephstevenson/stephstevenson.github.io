@@ -66,14 +66,17 @@ html, body {
     left: 4%;
   }
   .page-link {
-    @include transition(color 400ms ease 0s);
+    @include transition(all 400ms ease 0s);
+    position: relative;
     color: rgba(#fff, 0.9);
-    font-size: 1.25em;
+    font-size: 1em;
     font-weight: _font(normal);
     letter-spacing: 0.065em;
     line-height: $base-line-height;  // Gaps between nav items, but not on the first one
+    top: -4px;
     text-transform: lowercase;
-    text-shadow: 0px 0px 0.5px rgba(#000, 0.45);
+    // text-shadow: 0px 0px 0.5px rgba(#000, 0.45);
+    text-shadow: none !important;
     &:not(:first-child) {
       margin-left: 10px;
     }
@@ -189,7 +192,7 @@ html, body {
   opacity: 0.85;
   z-index: 25;
   h1 {
-    @include transition(text-shadow 350ms linear 150ms);
+    @include transition(text-shadow 500ms ease 200ms);
     font-family: ('Lobster', 'Open Sans', sans-serif);
     color: $theme-color;
     font-size: 5.25em;
@@ -204,13 +207,13 @@ html, body {
   }
   &:hover, &:active {
     h1 {
+      @include transition(text-shadow 450ms ease 100ms);
       text-shadow: 2px -0px 2px rgba(0,0,0,0.7), 0 0 6px rgba(0,0,0,0.25) !important
     }
   }
 }
 
 .bio {
-  min-height: 230px;
   margin-bottom: 15px;
 }
 
@@ -264,8 +267,9 @@ html, body {
     img {
       display: inline-block;
       min-width: 100% !important;
-      max-width: 100% !important;
+      width: auto;
       min-height: 100% !important;
+      max-height: 100% !important;
       margin: auto;
       overflow: hidden;
     }
@@ -327,7 +331,7 @@ html, body {
       &:before {
         position: relative;
         font-family: "FontAwesome";
-        font-size: 1.25em;
+        font-size: 1.1em;
         color: rgba(#000, 0.55);
         text-shadow: none !important;
         margin-right: 8px;
@@ -346,6 +350,7 @@ html, body {
 
 .button {
   @include transition(all 250ms ease 0s);
+  cursor: pointer !important;
 }
 
 .bottom {
@@ -376,7 +381,8 @@ html, body {
       color: _palette(white) !important;
     }
     &:hover, &:active {
-      background-color: darken(desaturate($theme-color, 15%), 10%);
+      background-color: lighten(desaturate($theme-color, 8%), 3%);
+      color: #fdfdfd;
       // background-color: _palette(accent5, fg-light);
     }
   }
@@ -972,7 +978,7 @@ html, body {
   }
   .author-name {
     display: inline;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 25px;
     float: left;
     padding: 0 5px 6px 0;
@@ -1119,7 +1125,7 @@ html, body {
     }
     .author-name {
       display: inline;
-      font-weight: 500;
+      font-weight: 600;
     }
     .post-meta-text {
       color: rgba(#fff, 0.95);
@@ -1677,9 +1683,10 @@ input[type="radio"] {
 * Footer **********************************************************
 */
 #footer {
+  @include linear-gradient(lighten(_palette(accent1, bg), 3%), darken(_palette(accent1, bg), 3%));
   background-color: _palette(accent1, bg);
   text-align: center;
-  padding: 2em 3em 0.25em 3em !important;
+  padding: 2em 3em 0.5em 3em !important;
   .icons {
     list-style: none;
     font-size: 1.5em;
@@ -1726,19 +1733,19 @@ input[type="radio"] {
     }
   }
   .copyright {
-    color: _palette(accent1, fg-light);
+    color: rgba(#fff, 0.5);
     font-size: 0.6em;
     font-weight: 600 !important;
     letter-spacing: _size(letter-spacing-alt) !important;
     text-transform: uppercase;
     list-style: none;
-    margin: 0 auto 1.25em;
+    margin: 0 auto 0.25em;
     padding: 0;
     
     li {
       display: inline-block !important;
-      border-left: solid 1px mix(#35393d, #ffffff, 80%) !important;
       line-height: _font(hdr-lheight-smaller) !important;
+      border-left: solid 1px mix(#35393d, #ffffff, 80%) !important;
       padding: 1px 0 1px 1em !important;
       
       &:first-child {
